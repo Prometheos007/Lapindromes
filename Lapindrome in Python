@@ -29,10 +29,7 @@ def listsort(a,b):
 
 #4. list compare
 def listcomp(a,b):
-	if a == b:
-		print("You're a Lapindrome Harry!")
-	elif a!=b:
-		print("It's not a Lapindrome")
+	print("You're a Lapindrome Harry!" if a ==b else "It's not a Lapindrome" )
 
 
 while __name__ == "__main__":
