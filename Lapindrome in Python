@@ -1,0 +1,47 @@
+#how to check for lapindromes
+
+#1.check for even or odd
+def isEven(a):
+	if (len(a)%2) == 0:
+		return True
+	else:
+		return False
+
+#2. divide into two
+def divIn2(b):
+
+	if isEven(b):
+		half = int(len(b)/2)
+		x = b[:(half)]
+		y = b[half:]
+	else:
+		half = int((len(b)-1)/2)
+		x = b[:(half)]
+		y = b[(half+1):]
+	return x,y	
+
+#3. get a sorted list
+def listsort(a,b):
+	a = str(sorted(list(a)))
+	b = str(sorted(list(b)))
+	return a,b
+
+
+#4. list compare
+def listcomp(a,b):
+	if a == b:
+		print("You're a Lapindrome Harry!")
+	elif a!=b:
+		print("It's not a Lapindrome")
+
+
+while __name__ == "__main__":
+	a = input("Enter a word: \n")
+	g,h = divIn2(a)
+
+	g,h = listsort(g,h)
+	
+	listcomp(g,h)
+	
+	break
+	
